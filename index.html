@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <div class="burger">
+          <img src="./img/Hamburger Icon.png" alt="" />
+        </div>
+        <div class="profile">
+          <img
+            src="./img/246575003_168351332156820_4393508523846078522_n.jpg"
+            alt=""
+          />
+          <h1>Myrlla<br />Julianna</h1>
+        </div>
+        <div class="social-group">
+          <div class="social">
+            <div class="logo">
+              <img src="./img/TikTok - Negative.svg" alt="" />
+            </div>
+            <div class="info">
+              <h3 id="tiktok"></h3>
+              <p>Seguidores</p>
+            </div>
+          </div>
+          <div class="social">
+            <div class="logo">
+              <img src="./img/Instagram - Negative.svg" alt="" />
+            </div>
+            <div class="info">
+              <h3 id="instagram">228.000</h3>
+              <p>Seguidores</p>
+            </div>
+          </div>
+          <div class="social">
+            <div class="logo">
+              <img src="./img/Telegram - Negative.svg" alt="" />
+            </div>
+            <div class="info">
+              <h3 id="telegram">100.000</h3>
+              <p>Membros</p>
+            </div>
+          </div>
+          <div class="social">
+            <div class="logo">
+              <img src="./img/YouTube - Negative.svg" alt="" />
+            </div>
+            <div class="info">
+              <h3 id="youtube">103.000</h3>
+              <p>Inscritos</p>
+            </div>
+          </div>
+        </div>
+        <div class="parceria">
+          <h3>Contato:</h3>
+          <div class="contatos">
+            <a
+              href="https://api.whatsapp.com/send?phone=5582999309766&text=Ol%C3%A1,%20tenho%20interesse%20em%20fechar%20parceria%20com%20Myrlla%20Julianna.%20"
+              target="_blank"
+            >
+              <div class="parceria-block">
+                <img src="./img/bxl-whatsapp.svg" alt="" />
+                <p>(82) 9 9930-9766</p>
+              </div>
+            </a>
+            <a href="mailto:myrlla.julianna@gmail.com" target="_blank">
+              <div class="parceria-block">
+                <img src="./img/Subtract.svg" alt="" />
+                <p>myrlla.julianna@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/myrllajulianna/" target="_blank">
+              <div class="parceria-block">
+                <img src="./img/bxl-instagram.svg" alt="" />
+                <p>@myrllajulianna</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mid">
+      <div class="container">
+        <div class="title">
+          <h2>Meus links:</h2>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="./img/free_icon_1.svg" alt="" class="normal" />
+            <img src="./img/free_icon_1 (6).svg" alt="" class="hidden" />
+            <h2>CUPONS</h2>
+          </div>
+          <div class="card">
+            <img src="./img/free_icon_1 (1).svg" alt="" class="normal" />
+            <img src="./img/free_icon_1 (7).svg" alt="" class="hidden" />
+            <h2>PROMOÇÕES</h2>
+          </div>
+          <div class="card">
+            <img src="./img/free_icon_1 (2).svg" alt="" class="normal" />
+            <img src="./img/free_icon_1 (5).svg" alt="" class="hidden" />
+            <h2>COMPRINHAS</h2>
+          </div>
+          <div class="card">
+            <img src="./img/free_icon_1 (3).svg" alt="" class="normal" />
+            <img src="./img/free_icon_1 (4).svg" alt="" class="hidden" />
+            <h2>PARCEIRIAS</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <p>Feito com &#x2764;&#xFE0F; by <a href="https://github.com/Ghedyvan">G Vinícius</a></p>
+    </footer>
+
+    <script>
+      window.onload = function () {
+        iniciarEfeitoAumento("tiktok", 210, 240, 1500);
+        iniciarEfeitoAumento("instagram", 198, 228, 1500);
+        iniciarEfeitoAumento("telegram", 70, 100, 1500);
+        iniciarEfeitoAumento("youtube", 73, 103, 1500);
+      };
+
+      function iniciarEfeitoAumento(
+        elementId,
+        startNumber,
+        endNumber,
+        duration
+      ) {
+        var stepTime = Math.abs(
+          Math.floor(duration / (endNumber - startNumber))
+        ); // Tempo de atualização de cada passo
+        var display = document.getElementById(elementId);
+
+        function incrementar() {
+          startNumber++;
+          display.textContent = startNumber + " MIL";
+          if (startNumber === endNumber) {
+            clearInterval(timer);
+          }
+        }
+
+        var timer = setInterval(incrementar, stepTime);
+      }
+    </script>
+  </body>
+</html>

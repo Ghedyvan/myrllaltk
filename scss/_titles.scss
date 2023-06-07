@@ -1,0 +1,63 @@
+
+
+
+// FONTES PARA O MOBILE 
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: $secondary;
+
+    @media screen and (max-width:500px){
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 72px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: $secondary;
+    }
+   
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: $orange;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color: $secondary;
+    line-height: 39px;
+    @media screen and (max-width:500px){
+        font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $secondary;
+    }
+    
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(247, 245, 249, 0.7);
+    
+}
