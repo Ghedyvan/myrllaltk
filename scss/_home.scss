@@ -352,6 +352,7 @@
     border-radius: 2rem;
     h2 {
       color: $orange;
+      padding-bottom: 3rem;
     }
     ul {
       display: flex;
@@ -496,8 +497,10 @@
       cursor: pointer;
     }
   }
-  @include responsive(380px){
-    .modal-contenido{
+  
+  @include responsive(490px){
+    .modal-contenido-parceria{
+
       h2{
         font-size: 3.2rem;
       }
@@ -508,8 +511,8 @@
     .whatsapp,
     .email,
     .instagram{
-      align-items: flex-start; 
-      justify-content: flex-startw;
+      align-items: center; 
+      justify-content: flex-start;
     }
     }
     
